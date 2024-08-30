@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  overflow: hidden;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.year {
+  font-size: 5em;
+  color: white;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.countdown {
+  margin: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 600px;
+  color: white;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.time-box {
+  margin: 0 15px;
+  font-size: 2.5em;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  width: 100px;
+  animation: popIn 1s ease-in-out infinite alternate;
+}
+
+.time-box::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  font-size: 0.35em;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  width: 100%;
+  height: 35px;
+}
+
+#day::before {
+  content: "Days";
+}
+#hour::before {
+  content: "Hours";
+}
+#minute::before {
+  content: "Minutes";
+}
+#second::before {
+  content: "Seconds";
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Media Query for screens less than 600px */
+@media (max-width: 600px) {
+  .countdown {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .time-box {
+    margin: 10px 0;
+    width: 80px;
+    font-size: 2em;
+  }
+}
