@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+h1 {
+  font-size: 100px;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 4px;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  font-size: 25px;
+  border: 4px solid;
+  cursor: pointer;
+  transition: 1s background-color;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.split {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.split.left {
+  left: 0;
+  background: url('../images/adidas.jpg') no-repeat center center/cover;
+  background-size: cover;
+}
+
+.split.right {
+  right: 0;
+  background: url('../images/nike.jpg') no-repeat center center/cover;
+  background-size: cover;
+}
+
+.active-left .left {
+  width: 75%;
+}
+
+.active-left .right {
+  width: 25%;
+}
+
+.active-right .left {
+  width: 25%;
+}
+
+.active-right .right {
+  width: 75%;
+}
+
+.left,
+.right {
+  transition: width 2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .split {
+    position: relative;
+    width: 100%;
+    height: 50%;
+  }
+
+  .split.left {
+    top: 0;
+  }
+
+  .split.right {
+    bottom: 0;
+  }
+}
