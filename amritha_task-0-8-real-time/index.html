@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Character Counter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"integrity="sha512-Fo3rlrQkz5F90vBjRfINq56FlzQJj3yySXH5x3Ggf9GCi4p0Dd/o9vVkTC5i1sA45BhzccY8lK4FkKskD2kXQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        <p> Real-time Character Counter</p>
+      </h2>
+      <textarea
+        id="textarea"
+        class="textarea"
+        placeholder="Please write your text here..."
+        maxlength="50"
+      ></textarea>
+      <div class="counter-container">
+        <p>
+          <i class="fas fa-sort-numeric-up-alt"></i> Total Characters:
+          <span class="total-counter" id="total-counter"></span>
+        </p>
+        <p>
+          <i class="fas fa-hourglass-half"></i> Remaining:
+          <span class="remaining-counter" id="remaining-counter"></span>
+        </p>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
